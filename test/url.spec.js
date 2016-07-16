@@ -5,7 +5,7 @@ const chai = require('chai');
 const should = chai.should();
 
 describe('Url', function () {
-  const { JekyllUrl } = require('../lib/url');
+  const JekyllUrl = require('../lib/url').JekyllUrl;
 
   describe('JekyllUrl', function () {
     // Tests taken from https://github.com/jekyll/jekyll/blob/a29498eaaebbccd415cc3b811d050137f456cd9a/test/test_url.rb
