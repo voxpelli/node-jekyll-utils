@@ -62,6 +62,25 @@ slugify('The _config.yml file', 'pretty', true)
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the slugified string
 
+### generateUrl
+
+**Parameters**
+
+-   `template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
+    or example "/:path/:basename:output_ext", where
+    a placeholder is prefixed with a colon.
+-   `jekyllResource` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A representation of a Jekyll resource such as a Post or a Page
+    -   `jekyllResource.basename_without_ext` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The file basename without the file extension.
+    -   `jekyllResource.date` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number))** The published date of the resource
+    -   `jekyllResource.data` **\[[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)]** The resource document's data
+        -   `jekyllResource.data.categories` **\[[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>]** The categories specified on the document
+        -   `jekyllResource.data.slug` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** The slug specified on the document
+
+
+-   Throws **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)** if not all needed placeholders are found
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
+
 ### JekyllUrl
 
 Methods that generate a URL for a resource such as a Post or a Page.
@@ -134,22 +153,3 @@ JekyllUrl.escape_path("/a b")
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the escaped path.
-
-### generateUrl
-
-**Parameters**
-
--   `template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
-    or example "/:path/:basename:output_ext", where
-    a placeholder is prefixed with a colon.
--   `jekyllResource` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A representation of a Jekyll resource such as a Post or a Page
-    -   `jekyllResource.basename_without_ext` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The file basename without the file extension.
-    -   `jekyllResource.date` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number))** The published date of the resource
-    -   `jekyllResource.data` **\[[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)]** The resource document's data
-        -   `jekyllResource.data.categories` **\[[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>]** The categories specified on the document
-        -   `jekyllResource.data.slug` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** The slug specified on the document
-
-
--   Throws **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)** if not all needed placeholders are found
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
