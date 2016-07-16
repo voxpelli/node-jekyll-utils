@@ -66,9 +66,9 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 **Parameters**
 
--   `template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
-    or example "/:path/:basename:output_ext", where
-    a placeholder is prefixed with a colon.
+-   `template` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** The String used as template for URL generation,
+    for example "/:path/:basename:output_ext", where
+    a placeholder is prefixed with a colon. Or one of the predefined styles "pretty", "none", "date" or "ordinal". (optional, default `date`)
 -   `jekyllResource` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A representation of a Jekyll resource such as a Post or a Page
     -   `jekyllResource.basename_without_ext` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The file basename without the file extension.
     -   `jekyllResource.date` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number))** The published date of the resource
@@ -148,8 +148,8 @@ Escapes a path to be a valid URL path segment
 **Examples**
 
 ```javascript
-JekyllUrl.escape_path("/a b")
-// => "/a%20b"
+JekyllUrl.escape_path('/a b')
+// => '/a%20b'
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the escaped path.
