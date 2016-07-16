@@ -17,21 +17,50 @@ Requires at least Node.js 5.x
 npm install jekyll-utils --save
 ```
 
-## Usage
-
-Simple:
-
-```javascript
-
-```
-
-Advanced:
-
-```javascript
-
-```
-
 ## API Usage
+
+### slugify
+
+Slugify a filename or title.
+
+When mode is "none", return the given string.
+
+When mode is "raw", return the given string,
+with every sequence of spaces characters replaced with a hyphen.
+
+When mode is "default" or nil, non-alphabetic characters are
+replaced with a hyphen too.
+
+When mode is "pretty", some non-alphabetic characters (.\_~!$&'()+,;=@)
+are not replaced with hyphen.
+
+If cased is true, all uppercase letters in the result string are
+replaced with their lowercase counterparts.
+
+**Parameters**
+
+-   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the string to create a slug of
+-   `mode` **\[[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)]** how string is slugified. Can be set to "default", "pretty" or "raw" (optional, default `default`)
+-   `cased` **\[[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)]** – whether to keep the character casing or not (optional, default `false`)
+
+**Examples**
+
+```javascript
+slugify('The _config.yml file')
+// => 'the-config-yml-file'
+```
+
+```javascript
+slugify('The _config.yml file', 'pretty')
+// => 'the-_config.yml-file'
+```
+
+```javascript
+slugify('The _config.yml file', 'pretty', true)
+// => 'The-_config.yml file'
+```
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the slugified string
 
 ### JekyllUrl
 
