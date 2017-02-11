@@ -1,6 +1,6 @@
 {
   "name": "jekyll-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "description": "A collection of Jekyll utilility methods to generate eg. Jekyll permalinks and slugs",
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
