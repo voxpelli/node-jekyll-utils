@@ -33,10 +33,9 @@
     "installed-check": "^2.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.1.2"
-
   },
   "dependencies": {
-    "strftime": "^0.9.2",
+    "strftime": "^0.10.0",
     "xregexp": "^3.1.1"
   }
 }
