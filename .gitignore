@@ -1,4 +1,4 @@
+/node_modules
 /coverage
 /docs
-/node_modules
-/.env
+/yarn.lock
