@@ -21,7 +21,7 @@
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "4.1.2",
     "coveralls": "2.13.3",
     "dependency-check": "2.10.1",
     "documentation": "4.0.0",
