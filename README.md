@@ -23,6 +23,8 @@ npm install jekyll-utils --save
 
 ### slugify
 
+-   **See: [Mimicked Jekyll Code](https://github.com/jekyll/jekyll/blob/9278eb8fcec85b17573c6658d7d67ef6ea6ffb92/lib/jekyll/utils.rb#L177)**
+
 Slugify a filename or title.
 
 When mode is "none", return the given string.
@@ -41,9 +43,9 @@ replaced with their lowercase counterparts.
 
 **Parameters**
 
--   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the string to create a slug of
--   `mode` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** how string is slugified. Can be set to "default", "pretty" or "raw" (optional, default `default`)
--   `cased` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** – whether to keep the character casing or not (optional, default `false`)
+-   `str` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the string to create a slug of
+-   `mode` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** how string is slugified. Can be set to "default", "pretty" or "raw" (optional, default `default`)
+-   `cased` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** – whether to keep the character casing or not (optional, default `false`)
 
 **Examples**
 
@@ -62,42 +64,44 @@ slugify('The _config.yml file', 'pretty', true)
 // => 'The-_config.yml file'
 ```
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the slugified string
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the slugified string
 
 ### generateUrl
 
 **Parameters**
 
--   `template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** The String used as template for URL generation,
+-   `template` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
     for example "/:path/:basename:output_ext", where
     a placeholder is prefixed with a colon. Or one of the predefined styles "pretty", "none", "date" or "ordinal". (optional, default `date`)
--   `jekyllResource` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A representation of a Jekyll resource such as a Post or a Page
-    -   `jekyllResource.basename_without_ext` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The file basename without the file extension.
-    -   `jekyllResource.date` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number))** The published date of the resource
-    -   `jekyllResource.data` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** The resource document's data
-        -   `jekyllResource.data.categories` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>?** The categories specified on the document
-        -   `jekyllResource.data.slug` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** The slug specified on the document
+-   `jekyllResource` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** A representation of a Jekyll resource such as a Post or a Page
+    -   `jekyllResource.basename_without_ext` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The file basename without the file extension.
+    -   `jekyllResource.date` **([Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number))** The published date of the resource
+    -   `jekyllResource.data` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** The resource document's data
+        -   `jekyllResource.data.categories` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>?** The categories specified on the document
+        -   `jekyllResource.data.slug` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** The slug specified on the document
 
 
--   Throws **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)** if not all needed placeholders are found
+-   Throws **[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)** if not all needed placeholders are found
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
 
 ### JekyllUrl
+
+-   **See: [Mimicked Jekyll Code](https://github.com/jekyll/jekyll/blob/cc82d442223bdaee36a2aceada64008a0106d82b/lib/jekyll/url.rb)**
 
 Methods that generate a URL for a resource such as a Post or a Page.
 
 **Parameters**
 
--   `options` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** One of :permalink or :template must be supplied.
-    -   `options.template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** One of :permalink or :template must be supplied.
+    -   `options.template` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
         or example "/:path/:basename:output_ext", where
         a placeholder is prefixed with a colon.
-    -   `options.null` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** :placeholders - A hash containing the placeholders which will be
+    -   `options.null` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** :placeholders - A hash containing the placeholders which will be
         replaced when used inside the template. E.g.
         { year: (new Date()).getFullYear() } would replace
         the placeholder ":year" with the current year.
-    -   `options.permalink` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** If supplied, no URL will be generated from the
+    -   `options.permalink` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** If supplied, no URL will be generated from the
         template. Instead, the given permalink will be
         used as URL.
 
@@ -114,29 +118,29 @@ new JekyllUrl({
 
 Generates the relative URL of the resource
 
--   Throws **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)** if the relative URL contains a colon
+-   Throws **[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)** if the relative URL contains a colon
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the String URL
 
 #### generated_permalink
 
 Generates a URL from the permalink
 
-Returns **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| `false`)** the unsanitized String URL
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| `false`)** the unsanitized String URL
 
 #### generated_url
 
 Generates a URL from the template
 
-Returns **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| `false`)** the unsanitized String URL
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| `false`)** the unsanitized String URL
 
 #### sanitize_url
 
 **Parameters**
 
--   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** an unsanitized String URL
+-   `str` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** an unsanitized String URL
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** a sanitized String URL, stripping "../../" and multiples of "/",
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** a sanitized String URL, stripping "../../" and multiples of "/",
 as well as the beginning "/" so we can enforce and ensure it.
 
 #### escape_path
@@ -145,7 +149,7 @@ Escapes a path to be a valid URL path segment
 
 **Parameters**
 
--   `path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The path to be escaped.
+-   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The path to be escaped.
 
 **Examples**
 
@@ -154,4 +158,4 @@ JekyllUrl.escape_path('/a b')
 // => '/a%20b'
 ```
 
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the escaped path.
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the escaped path.
