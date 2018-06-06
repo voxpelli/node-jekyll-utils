@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "mocha": "NODE_ENV=test istanbul cover _mocha -- -u exports -R spec test/**/*.spec.js",
+    "mocha": "NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/**/*.spec.js",
     "dependency-check": "JS_FILES=\"*.js test/*.js\" && dependency-check . $JS_FILES && dependency-check . $JS_FILES --unused --no-dev",
     "test": "installed-check -e && eslint . && npm run dependency-check && npm run mocha && documentation readme -s \"API Usage\" --diff-only",
     "prepush": "npm test",
@@ -32,8 +32,8 @@
     "eslint-plugin-standard": "^2.0.0",
     "husky": "^0.13.1",
     "installed-check": "^2.0.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "nyc": "^12.0.2"
   },
   "dependencies": {
     "strftime": "^0.10.0",
