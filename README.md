@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/voxpelli/node-jekyll-utils.svg?branch=master)](https://travis-ci.org/voxpelli/node-jekyll-utils)
 [![Coverage Status](https://coveralls.io/repos/voxpelli/node-jekyll-utils/badge.svg)](https://coveralls.io/r/voxpelli/node-jekyll-utils)
-[![Dependency Status](https://gemnasium.com/voxpelli/node-jekyll-utils.svg)](https://gemnasium.com/voxpelli/node-jekyll-utils)
+[![dependencies Status](https://david-dm.org/voxpelli/node-jekyll-utils/status.svg)](https://david-dm.org/voxpelli/node-jekyll-utils)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat)](https://github.com/Flet/semistandard)
 
 A collection of Jekyll utilility methods to generate eg. Jekyll permalinks and slugs
