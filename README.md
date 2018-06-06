@@ -9,7 +9,7 @@ A collection of Jekyll utilility methods to generate eg. Jekyll permalinks and s
 
 ## Requirements
 
-Requires at least Node.js 5.x
+Requires at least Node.js 6.x
 
 ## Installation
 
