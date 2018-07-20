@@ -24,7 +24,7 @@
     "chai": "4.1.2",
     "coveralls": "3.0.2",
     "dependency-check": "3.1.0",
-    "documentation": "4.0.0",
+    "documentation": "8.0.2",
     "eslint": "3.19.0",
     "eslint-config-semistandard": "7.0.0",
     "eslint-config-standard": "6.2.1",
