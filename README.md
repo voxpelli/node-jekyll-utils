@@ -42,13 +42,13 @@ are not replaced with hyphen.
 If cased is true, all uppercase letters in the result string are
 replaced with their lowercase counterparts.
 
-**Parameters**
+#### Parameters
 
 -   `str` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the string to create a slug of
 -   `mode` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** how string is slugified. Can be set to "default", "pretty" or "raw" (optional, default `default`)
 -   `cased` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** – whether to keep the character casing or not (optional, default `false`)
 
-**Examples**
+#### Examples
 
 ```javascript
 slugify('The _config.yml file')
@@ -69,7 +69,7 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### generateUrl
 
-**Parameters**
+#### Parameters
 
 -   `template` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
     for example "/:path/:basename:output_ext", where
@@ -92,7 +92,7 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 Methods that generate a URL for a resource such as a Post or a Page.
 
-**Parameters**
+#### Parameters
 
 -   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** One of :permalink or :template must be supplied.
     -   `options.template` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The String used as template for URL generation,
@@ -106,7 +106,7 @@ Methods that generate a URL for a resource such as a Post or a Page.
         template. Instead, the given permalink will be
         used as URL.
 
-**Examples**
+#### Examples
 
 ```javascript
 new JekyllUrl({
@@ -137,7 +137,7 @@ Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### sanitize_url
 
-**Parameters**
+##### Parameters
 
 -   `str` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** an unsanitized String URL
 
@@ -148,11 +148,11 @@ as well as the beginning "/" so we can enforce and ensure it.
 
 Escapes a path to be a valid URL path segment
 
-**Parameters**
+##### Parameters
 
 -   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The path to be escaped.
 
-**Examples**
+##### Examples
 
 ```javascript
 JekyllUrl.escape_path('/a b')
