@@ -13,9 +13,13 @@
   "scripts": {
     "mocha": "NODE_ENV=test nyc --reporter=lcov --reporter text mocha test/**/*.spec.js",
     "dependency-check": "JS_FILES=\"*.js test/*.js\" && dependency-check . $JS_FILES && dependency-check . $JS_FILES --unused --no-dev",
-    "test": "installed-check -e && eslint . && npm run dependency-check && npm run mocha && documentation readme -s \"API Usage\" --no-markdown-toc --diff-only",
-    "prepush": "npm test",
+    "test": "installed-check -e -i eslint && eslint . && npm run dependency-check && npm run mocha && documentation readme -s \"API Usage\" --no-markdown-toc --diff-only",
     "build-docs": "documentation readme -s \"API Usage\" --no-markdown-toc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
   },
   "engines": {
     "node": ">=6.0.0"
@@ -25,14 +29,14 @@
     "coveralls": "3.0.2",
     "dependency-check": "3.2.1",
     "documentation": "8.1.2",
-    "eslint": "4.19.1",
-    "eslint-config-semistandard": "12.0.1",
-    "eslint-config-standard": "11.0.0",
+    "eslint": "5.11.0",
+    "eslint-config-semistandard": "13.0.0",
+    "eslint-config-standard": "12.0.0",
     "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-node": "8.0.0",
     "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-standard": "3.1.0",
-    "husky": "0.14.3",
+    "eslint-plugin-standard": "4.0.0",
+    "husky": "1.2.1",
     "installed-check": "2.2.0",
     "mocha": "5.2.0",
     "nyc": "13.1.0"
