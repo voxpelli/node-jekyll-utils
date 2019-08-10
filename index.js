@@ -1,3 +1,6 @@
+// @ts-check
+/// <reference types="node" />
+
 'use strict';
 
 const slugify = require('./lib/slug').slugify;

@@ -1,3 +1,8 @@
+// @ts-check
+/// <reference types="node" />
+/// <reference types="mocha" />
+/// <reference types="chai" />
+
 'use strict';
 
 const chai = require('chai');
@@ -11,6 +16,7 @@ describe('Url', function () {
     // Tests taken from https://github.com/jekyll/jekyll/blob/a29498eaaebbccd415cc3b811d050137f456cd9a/test/test_url.rb
 
     it('should throw an exception if neither permalink or template is specified', () => {
+      // @ts-ignore
       should.Throw(() => new JekyllUrl({ placeholders: {} }));
     });
 

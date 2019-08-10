@@ -1,3 +1,8 @@
+// @ts-check
+/// <reference types="node" />
+/// <reference types="mocha" />
+/// <reference types="chai" />
+
 'use strict';
 
 const chai = require('chai');
@@ -11,6 +16,7 @@ describe('Slug', function () {
     // Tests taken from https://github.com/jekyll/jekyll/blob/70aa8a4e37cdbb935d8aacda3d6c6b598c2c91bb/test/test_utils.rb#L129
 
     it('should return undefined if passed undefined', () => {
+      // @ts-ignore
       should.not.exist(slugify());
     });
 
