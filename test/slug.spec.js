@@ -48,7 +48,7 @@ describe('Slug', function () {
     });
 
     it('should not modify the original string', () => {
-      let title = 'Quick-start guide';
+      const title = 'Quick-start guide';
       slugify(title);
       title.should.equal('Quick-start guide');
     });
