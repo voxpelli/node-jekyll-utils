@@ -1,6 +1,6 @@
 # Jekyll Utils
 
-[![Build Status](https://travis-ci.org/voxpelli/node-jekyll-utils.svg?branch=master)](https://travis-ci.org/voxpelli/node-jekyll-utils)
+[![Build Status](https://travis-ci.com/voxpelli/node-jekyll-utils.svg?branch=master)](https://travis-ci.com/voxpelli/node-jekyll-utils)
 [![Coverage Status](https://coveralls.io/repos/voxpelli/node-jekyll-utils/badge.svg)](https://coveralls.io/r/voxpelli/node-jekyll-utils)
 [![dependencies Status](https://david-dm.org/voxpelli/node-jekyll-utils/status.svg)](https://david-dm.org/voxpelli/node-jekyll-utils)
 [![Known Vulnerabilities](https://snyk.io/test/github/voxpelli/node-jekyll-utils/badge.svg?targetFile=package.json)](https://snyk.io/test/github/voxpelli/node-jekyll-utils?targetFile=package.json)
