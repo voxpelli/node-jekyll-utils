@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.0",
-    "@types/mocha": "^5.2.7",
+    "@types/mocha": "^7.0.0",
     "@types/node": "^12.7.1",
     "@voxpelli/eslint-config": "^4.0.0",
     "chai": "^4.2.0",
