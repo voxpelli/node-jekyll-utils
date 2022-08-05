@@ -53,6 +53,6 @@
   },
   "dependencies": {
     "strftime": "^0.10.0",
-    "xregexp": "^4.0.0"
+    "xregexp": "^5.0.0"
   }
 }
