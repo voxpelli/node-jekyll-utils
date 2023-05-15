@@ -32,7 +32,7 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.1",
-    "@voxpelli/eslint-config": "^4.0.0",
+    "@voxpelli/eslint-config": "^16.0.7",
     "chai": "^4.2.0",
     "coveralls": "^3.0.5",
     "dependency-check": "^4.1.0",
